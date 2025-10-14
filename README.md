@@ -16,14 +16,3 @@ The dataset used is the **Nashville Housing Dataset**, which contains informatio
 The main goal of this project is to transform messy, inconsistent, and incomplete housing data into a clean, analysis-ready format.
 
 ---
-
-## 🔧 Steps Performed
-
-### 1. Standardized Date Format
-Converted `SaleDate` into a standardized `DATE` format.
-```sql
-ALTER TABLE NashvilleHousing
-ADD SaleDateConverted DATE;
-
-UPDATE NashvilleHousing
-SET SaleDateConverted = CONVERT(DATE, SaleDate);
