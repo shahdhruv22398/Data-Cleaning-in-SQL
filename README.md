@@ -1,2 +1,29 @@
-# Data-Cleaning-in-SQL
-Cleaned and transformed raw housing data using SQL to make it analysis-ready. Key tasks included standardizing date formats, filling missing addresses, splitting address fields, normalizing categorical values, removing duplicates, and dropping unused columns.
+# 🧹 Nashville Housing Data Cleaning in SQL
+
+This project demonstrates how to clean and prepare raw housing data using **SQL** for better analysis and reporting.  
+The dataset used is the **Nashville Housing Dataset**, which contains information on property sales, ownership, and location details.
+
+---
+
+## 📁 Dataset
+- **File:** `Nashville Housing Data for Data Cleaning.xlsx`  
+- **Source:** Kaggle / Public Nashville Housing Records  
+- **Goal:** Clean and standardize the dataset for analysis and visualization.
+
+---
+
+## 🧠 Objectives
+The main goal of this project is to transform messy, inconsistent, and incomplete housing data into a clean, analysis-ready format.
+
+---
+
+## 🔧 Steps Performed
+
+### 1. Standardized Date Format
+Converted `SaleDate` into a standardized `DATE` format.
+```sql
+ALTER TABLE NashvilleHousing
+ADD SaleDateConverted DATE;
+
+UPDATE NashvilleHousing
+SET SaleDateConverted = CONVERT(DATE, SaleDate);
