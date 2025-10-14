@@ -14,5 +14,3 @@ The dataset used is the **Nashville Housing Dataset**, which contains informatio
 
 ## 🧠 Objectives
 The main goal of this project is to transform messy, inconsistent, and incomplete housing data into a clean, analysis-ready format.
-
----
